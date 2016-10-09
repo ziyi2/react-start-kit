@@ -14,9 +14,9 @@
     npm install babel-core babel-preset-es2015 babel-preset-react babel-preset-stage-3 --save-dev
 ```
 
->Tip: 注意`--save-dev`用在开发环境,`--save`用在生产环境.
+>注意: `--save-dev`用在开发环境,`--save`用在生产环境.
 
-同时在根目录下创建`.babelrc`文件并且添加这三个`preset`
+同时创建`.babelrc`文件并且添加这三个`preset`
 
 ```javascript
    {
