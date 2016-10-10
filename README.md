@@ -232,7 +232,10 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
   npm run lint
 ```
 
-!(ESLint结果图)[https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/eslint.jpeg]
+
+<p align="center">
+ <img src="https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/eslint.jpeg" alt="ESLint">
+</p>
 
 
 >注意: 在MAC下有效,但是Windows无效...
