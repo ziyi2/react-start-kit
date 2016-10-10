@@ -2,13 +2,13 @@
 
 ## 1 React+Babel+Webpack
 
-### 1.1 安装React
+### 1.1 React
 
 ```javascript
     npm install react react-dom --save
 ```
 
-### 1.2 安装Babel6
+### 1.2 Babel6
 
 ```javascript
     npm install babel-core babel-preset-es2015 babel-preset-react babel-preset-stage-3 --save-dev
@@ -46,7 +46,7 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
    }
 ```
 
-### 1.3 安装Webpack
+### 1.3 Webpack
 
 ```javascript
     npm install webpack --save-dev
@@ -101,6 +101,20 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 ```
 
 
+在`package.json`文件中添加启动命令
+
+```javascript
+     "build": "webpack"
+```
+
+如果不想每次修改模块后都重新编译，那么可以启动监听模式。开启监听模式后，没有变化的模块会在编译后缓存到内存中，而不会每次都被重新编译，所以监听模式的整体速度是很快
+
+```javascript
+     "build": "webpack --progress --colors --watch"
+```
+
+
+
 ### 1.4 运行
 源代码在`src`目录下,打包文件到`build`目录下,运行
 
@@ -122,13 +136,111 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 
 >注意: 这里的`bundle.js`已经有1.05MB大小,明显需要优化处理.
 
+## 2 React+Babel+Webpack+ESLint
+
+### 2.1 webpack-dev-server
+
+在开发模式中,使用`webpack-dev-server`是一个更好的选择,它将在[localhost:8080](localhost:8080)启动一个`express`静态资源web服务器，并且会以监听模式自动运行webpack,在浏览器打开[localhost:8080](localhost:8080)或 [localhost:8080/webpack-dev-server](localhost:8080/webpack-dev-server)可以浏览项目中的页面和编译后的资源输出，并且通过一个socket.io服务实时监听它们的变化并自动刷新页面
+
+```javascript
+    npm install webpack-dev-server --save-dev
+```
+
+在`package.json`文件中添加启动命令
+
+```javascript
+    "start": "webpack-dev-server --devtool source-map --inline --progress --colors --content-base build"
+```
+
+启动监听命令
+
+```javascript
+    npm start
+```
+
+查看打包结果
+
+```javascript
+   Hash: f594f03e2daaa05cb0df
+   Version: webpack 1.13.2
+   Time: 3079ms
+           Asset     Size  Chunks             Chunk Names
+       bundle.js  1.29 MB       0  [emitted]  main
+   bundle.js.map  1.55 MB       0  [emitted]  main
+   chunk    {0} bundle.js, bundle.js.map (main) 1.19 MB [rendered]
+```
+
+此时可以启动浏览器查看[localhost:8080](localhost:8080)
+
+### 2.2 Hot Module Replacement
+
+`HMR`即模块热部署,也就是说我们的修改后的代码不仅可以自动打包，而且浏览器不用完全刷新，只需要异步刷新，加载修改后部分代码即可，加载完成效果会马上反应在页面效果上。我们只需要在启动webpack-dev-server是添加--hot参数即可
+
+```javascript
+    webpack-dev-server --hot --inline
+```
+当然模块热部署会使`bundle`的文件变大.
+
+### 2.3 ESLint and Airbnb's ESLint config
+
+```javascript
+    npm install eslint eslint-config-airbnb eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y --save-dev
+```
+
+添加`.eslintrc`文件和`.eslintignore`文件
+
+```javascript
+   {
+     "env": {
+       "node": true
+     },
+     "ecmaFeatures": {
+       "jsx": true
+     },
+     "globals": {
+       "React": true
+     },
+     "plugins": [
+       "react"
+     ],
+     "extends": "airbnb",
+     "rules": {
+       "comma-dangle": 0,
+       "no-console": 0,
+       "id-length": 0,
+       "react/prop-types": 0
+     }
+   }
+```
+
+```javascript
+  build/**
+  node_modules/**
+  **/*.css
+  **/*.html
+```
+
+添加命令
+
+```javascript
+  "lint": "eslint 'src/**/*.@(js|jsx)'",
+```
+
+启动检查
+
+```javascript
+  npm run lint
+```
+
+
 
 
 ## 参考链接
 
-### Github
-
+### Webpack
 - [webpack-demos](https://github.com/ruanyf/webpack-demos)
+- [webpack中文指南](http://webpackdoc.com/development.html)
 
-
+### ESLint
+- [ESLint](https://github.com/Jocs/ESLint_docs)
 
