@@ -250,12 +250,30 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 - 在`package.json`中添加了`pre-commit`字段
 - 在`package.json`中的`scripts`中添加了两个命令`lint`和`validate`(如果不存在)
 
+`pre-commit`字段如下
+
+```javascript
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
+```
+
+
 可以删除`jshintrc`和`jshintignore`文件,因为检测使用的是ESLint,提交代码时
 
 <p align="center">
  <img src="https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/precommit.jpeg" alt="ESLint">
 </p>
 
+当然如果不想在提交之前执行不想要的命令,修改`pre-commit`字段如下
+
+```javascript
+  "pre-commit": [
+    "lint"
+  ]
+```
 
 
 ## 参考链接

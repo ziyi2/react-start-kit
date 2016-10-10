@@ -6,13 +6,15 @@
     "jsx": true
   },
   "globals": {
-    "React": true
+    "React": true,
+    "document",true
   },
   "plugins": [
     "react"
   ],
   "extends": "airbnb",
   "rules": {
+    semi: [2, "never"],
     "comma-dangle": 0,
     "no-console": 0,
     "id-length": 0,

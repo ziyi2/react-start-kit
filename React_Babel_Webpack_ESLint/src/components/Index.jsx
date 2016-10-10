@@ -1,13 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-import './App.css';
+require('./App.css')
 
-export default class Index extends Component {
-
-    render() {
-        return (
-            <h1>Hello React_Babel_Webpack_ESLint</h1>
-        )
-    }
-}
-
+export default () =>
+  <h1>Hello World</h1>
