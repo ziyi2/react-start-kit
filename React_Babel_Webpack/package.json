@@ -4,6 +4,7 @@
   "description": "A react starter kit",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,8 +14,6 @@
   "keywords": [
     "es6",
     "react",
-    "react-router",
-    "react-redux",
     "webpack"
   ],
   "author": "ziyi2",

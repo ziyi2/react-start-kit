@@ -61,9 +61,66 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 创建`webpack.config.js`文件
 
 
+```javascript
+    var webpack = require('webpack');
+    var path = require('path');
+
+    module.exports = {
+        entry: [
+            'babel-polyfill',
+            path.resolve(__dirname, 'src/App.jsx')
+        ],
+        resolve: {
+            extensions: ["", ".js", ".jsx"]     //require的时候不需要加上文件扩展名
+        },
+        output: {
+            path: __dirname + '/build',
+            publicPath: '/',
+            filename: 'bundle.js'
+        },
+        module: {
+            loaders: [
+                {
+                    test: /\.css$/,
+                    include: path.resolve(__dirname, 'src'),
+                    loader: 'style-loader!css-loader?modules'
+                },
+                {
+                    test: /\.jsx?$/,
+                    include: path.resolve(__dirname, 'src'),
+                    exclude: /node_modules/,
+                    loader: 'babel'
+                },
+                {
+                    test: /\.(png|jpg)$/,
+                    loader: 'url-loader?limit=8192'
+                }
+            ]
+        }
+    };
+```
 
 
+### 1.4 运行
+源代码在`src`目录下,打包文件到`build`目录下,运行
 
+```javascript
+    npm run build
+```
+
+查看打包结果
+
+```javascript
+    Hash: d0d4d55fb0b5f49636f5
+    Version: webpack 1.13.2
+    Time: 2392ms
+        Asset     Size  Chunks             Chunk Names
+    bundle.js  1.05 MB       0  [emitted]  main
+       [0] multi main 40 bytes {0} [built]
+        + 559 hidden modules
+```
+
+>注意: 这里的`bundle.js`已经有1.05MB大小,明显需要优化处理.
 
 
 

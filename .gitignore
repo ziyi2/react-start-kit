@@ -2,5 +2,11 @@
 .idea
 
 #node_modules
-node_modules
+**/node_modules
 
+#npm-debug
+**/npm-debug.log
+**/npm-debug.log.*
+
+#build
+**/build/bundle.*

@@ -4,11 +4,11 @@ var path = require('path');
 module.exports = {
     entry: [
         'babel-polyfill',
-        path.resolve(__dirname, 'src/main.jsx')
+        path.resolve(__dirname, 'src/App.jsx')
     ],
     resolve: {
-        //When requiring, you don't need to add these extensions
-        extensions: ["", ".js", ".jsx"]
+
+        extensions: ["", ".js", ".jsx"]     //require的时候不需要加上文件扩展名
     },
     output: {
         path: __dirname + '/build',
@@ -35,3 +35,5 @@ module.exports = {
         ]
     }
 };
+
+
