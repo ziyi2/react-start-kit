@@ -237,10 +237,24 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
  <img src="https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/eslint.jpeg" alt="ESLint">
 </p>
 
+>注意: 在MAC下有效,但是Windows无效?
 
->注意: 在MAC下有效,但是Windows无效...
+添加`pre-commit`模块,可以在`git commit`之前使用ESLint对编写代码作出规范校验,安装模块
 
+```javascript
+  npm install --save-dev precommit-hook
+```
 
+安装完该模块后,工程中会有如下变化
+- 在当前工程下自动添加了`jshintrc`和`jshintignore`文件
+- 在`package.json`中添加了`pre-commit`字段
+- 在`package.json`中的`scripts`中添加了两个命令`lint`和`validate`(如果不存在)
+
+可以删除`jshintrc`和`jshintignore`文件,因为检测使用的是ESLint,提交代码时
+
+<p align="center">
+ <img src="https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/precommit.jpeg" alt="ESLint">
+</p>
 
 
 
@@ -252,4 +266,5 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 
 ### ESLint
 - [ESLint](https://github.com/Jocs/ESLint_docs)
-
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+- [react-babel-webpack-boilerplate](https://github.com/ruanyf/react-babel-webpack-boilerplate)
