@@ -5,9 +5,7 @@ import Index from './components/Index';
 
 const app = document.getElementById('app');
 
-render (
+render(
     <Index />,
     app
 );
-
-

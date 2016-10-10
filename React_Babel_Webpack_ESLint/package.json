@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --progress --colors --watch",
     "start": "webpack-dev-server --devtool source-map --inline --progress --colors --content-base build",
-    "lint": "eslint src/**/*.@(js|jsx)",
+    "lint": "eslint 'src/**/*.@(js|jsx)'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
