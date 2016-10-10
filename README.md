@@ -267,6 +267,11 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
  <img src="https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/precommit.jpeg" alt="ESLint">
 </p>
 
+如果命令通过
+<p align="center">
+ <img src="https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/precommit-2.jpeg" alt="ESLint">
+</p>
+
 当然如果不想在提交之前执行不想要的命令,修改`pre-commit`字段如下
 
 ```javascript
