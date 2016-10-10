@@ -261,7 +261,7 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 ```
 
 
-可以删除`jshintrc`和`jshintignore`文件,因为检测使用的是ESLint,提交代码时
+可以删除`jshintrc`和`jshintignore`文件,因为检测使用的是ESLint,提交代码时如果`npm run lint`不通过
 
 <p align="center">
  <img src="https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/precommit.jpeg" alt="ESLint">
