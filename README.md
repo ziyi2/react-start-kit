@@ -319,3 +319,9 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 - [ESLint](https://github.com/Jocs/ESLint_docs)
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 - [react-babel-webpack-boilerplate](https://github.com/ruanyf/react-babel-webpack-boilerplate)
+
+### Redux
+- [Redux中文文档](http://cn.redux.js.org/index.html)
+- [redux](https://github.com/reactjs/redux)
+- [redux-tutorial](https://github.com/react-guide/redux-tutorial-cn)
+- [react-redux-tutorial](https://github.com/lewis617/react-redux-tutorial)
