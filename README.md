@@ -179,7 +179,25 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 ```javascript
     webpack-dev-server --hot --inline
 ```
-当然模块热部署会使`bundle`的文件变大.
+当然模块热部署会使`bundle`的文件变大. 还有另外一种方法进行热部署就是修改`webpack.config.json`
+
+
+```javascript
+    var webpack = require('webpack');
+    var path = require('path');
+    var OpenBrowserPlugin = require('open-browser-webpack-plugin'); //自动打开浏览器插件
+
+    module.exports = {
+      ...
+      plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new OpenBrowserPlugin({ url: 'http://localhost:8080' })     //自动打开浏览器
+      ]
+    };
+```
+
+
+
 
 ### 2.3 ESLint and Airbnb's ESLint config
 
@@ -280,12 +298,22 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
   ]
 ```
 
+## 3 React+Babel+Webpack+ESLint+Redux
+
+```javascript
+  npm install redux react-redux redux-thunk --save
+```
+
+
+
 
 ## 参考链接
 
 ### Webpack
 - [webpack-demos](https://github.com/ruanyf/webpack-demos)
 - [webpack中文指南](http://webpackdoc.com/development.html)
+- [Hot Module Replacement](https://github.com/webpack/docs/wiki/hot-module-replacement)
+- [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate)
 
 ### ESLint
 - [ESLint](https://github.com/Jocs/ESLint_docs)
