@@ -385,6 +385,12 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
    1 passing (6ms)
 ```
 
+如果需要测试es6代码,则只需要修改测试命令
+
+```javascript
+ "test": "mocha ./test/**/*.test.js --compilers js:babel-core/register --reporter mochawesome"
+```
+
 当然测试文件一多,这种查看方式就会变得非常烦躁,此时可以使用浏览器页面产生报告的形式
 
 ```javascript
@@ -394,7 +400,7 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 修改测试命令
 
 ```javascript
- "test": "mocha ./test/**/*.test.js --reporter mochawesome"
+ "test": "mocha ./test/**/*.test.js --compilers js:babel-core/register --reporter mochawesome"
 ```
 
 具体可详细查看[测试框架 Mocha 实例教程](http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html)
