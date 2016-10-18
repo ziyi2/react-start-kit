@@ -440,11 +440,6 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 回答一系列问题:
 
 ```javascript
-   作者：天方夜
-   链接：https://zhuanlan.zhihu.com/p/22280891
-   来源：知乎
-   著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
    Which testing framework do you want to use ?
    Press tab to list possible options. Enter to move to the next question.
    > mocha
@@ -629,3 +624,7 @@ module.exports = function(config) {
 
 ### Mocha
 - [测试框架 Mocha 实例教程](http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html)
+
+### Karma
+- [karma,webpack](http://www.tuicool.com/articles/jMvmEzI)
+- [karma,coverage](http://www.jianshu.com/p/6726c0410650)
