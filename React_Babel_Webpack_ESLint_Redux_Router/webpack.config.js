@@ -9,7 +9,7 @@ module.exports = {
     ],
     resolve: {
 
-        extensions: ["", ".js", ".jsx"]     //require的时候不需要加上文件扩展名
+        extensions: ["", ".js", ".jsx"]  //require的时候不需要加上文件扩展名
     },
     output: {
         path: __dirname + '/build',
