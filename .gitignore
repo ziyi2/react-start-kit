@@ -10,3 +10,6 @@
 
 #build
 **/build/bundle.*
+
+#test
+mochawesome-reports
