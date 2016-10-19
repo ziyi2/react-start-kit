@@ -30,25 +30,10 @@ Redux主要是用来管理React的state的,本身还是非常难以理解的,相
 
 Redux当然延续了Flux单向数据流的思想,下面是一张Flux的数据流示意图
 
-/*
-                 _________               ____________               ___________
-                |         |             |            |             |           |
-                | Action  |------------▶| Dispatcher |------------▶| callbacks |
-                |_________|             |____________|             |___________|
-                     ▲                                                   |
-                     |                                                   |
-                     |                                                   |
- _________       ____|_____                                          ____▼____
-|         |◀----|  Action  |                                        |         |
-| Web API |     | Creators |                                        |  Store  |
-|_________|----▶|__________|                                        |_________|
-                     ▲                                                   |
-                     |                                                   |
-                 ____|________           ____________                ____▼____
-                |   User       |         |   React   |              | Change  |
-                | interactions |◀--------|   Views   |◀-------------| events  |
-                |______________|         |___________|              |_________|
-*/
+<p align="center">
+ <img src="https://github.com/ziyi2/react-start-kit/blob/master/React-Redux/imgs/flux.jpg" alt="flux">
+</p>
+
 
 
 Flux是怎么工作的呢?
@@ -80,51 +65,18 @@ Flux是怎么工作的呢?
 
 这五个文件夹怎么工作呢?
 
-/*
-                 _________               ____________               ___________
-                |         |             |            |             |           |
-                | Action  |------------▶| Dispatcher |------------▶| callbacks |
-                |_________|             |____________|             |___________|
-                     ▲                                                   |
-                     |                                                   |
-                     |                                                   |
- _________       ____|_____                                          ____▼____
-|         |◀----|  Action  |                                        |         |
-| Web API |     | Creators |                                        |  Store  |
-|_________|----▶|__________|                                        |_________|
-                     ▲                                                   |
-                     |                                                   |
-                 ____|________           ____________                ____▼____
-                |   User       |         |   React   |              | Change  |
-                | interactions |◀--------|   Views   |◀-------------| events  |
-                |______________|         |___________|              |_________|
-*/
+<p align="center">
+ <img src="https://github.com/ziyi2/react-start-kit/blob/master/React-Redux/imgs/flux.jpg" alt="flux">
+</p>
 
 仍然是这张图? 在Flux中我们可以清晰的看到Dispatcher, callbacks以及Change events,但是在Redux中,这些工作都已经被隐藏掉了.
 
 我们想象一下,最终变成了下面这张图
 
 
-/*
-                 _________                ____________               ___________
-                |         |              |            |             |           |
-                | actions  |------------▶| store      |------------▶| reducers  |
-                |_________|              |____________|             |___________|
-                     ▲                                                   |
-                     |                                                   |
-                     |                                                   |
- _________       ____|_____                                          ____▼________
-|         |◀----|  Action  |                                        |              |
-| Web API |     | Creators |                                        |  containers  |
-|_________|----▶|__________|                                        |_____________ |
-                     ▲                                                   |
-                     |                                                   |
-                 ____|________           ____________                ____▼________
-                |   User       |         |   React   |              |               |
-                | interactions |◀--------|   Views   |◀-------------| components    |
-                |______________|         |___________|              |_____________  |
-*/
-
+<p align="center">
+ <img src="https://github.com/ziyi2/react-start-kit/blob/master/React-Redux/imgs/redux.jpg" alt="redux">
+</p>
 
 
 
