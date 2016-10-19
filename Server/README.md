@@ -1,4 +1,4 @@
-# 2 React+Babel+Webpack+ESLint
+# 2 React+Babel+Webpack+Server
 
 ## 2.1 webpack-dev-server
 

@@ -1,4 +1,4 @@
-# 4 React+Babel+Webpack+ESLint+Redux+Router
+# 4 React+Babel+Webpack+Server+Redux+Router
 
 ```javascript
   npm install history react-router --save

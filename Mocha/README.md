@@ -1,4 +1,4 @@
-# 5 React+Babel+Webpack+ESLint+Redux+Router+Mocha
+# 5 React+Babel+Webpack+Server+Redux+Router+Mocha
 
 `Mocha`是JavaScript的单元测试框架,`Chai`是断言库.`Mocha`是运行在Node环境的,在进行express端(服务端)测试时候使用`Mocha`测试框架是非常高效的一个选择
 

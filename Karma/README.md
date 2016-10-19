@@ -1,4 +1,4 @@
-# 6 React+Babel+Webpack+ESLint+Redux+Router+Mocha+Karma
+# 6 React+Babel+Webpack+Server+Redux+Router+Mocha+Karma
 
 之前说了`Mocha`是运行在Node端的,那么如果是浏览器端环境的测试,是不是也可以使用`Mocha`呢,答案当然是肯定的,需要加载`jsdom`模块,但是这里我们推荐使用`karma`测试框架
 

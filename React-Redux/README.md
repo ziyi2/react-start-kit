@@ -1,4 +1,4 @@
-# 3 React+Babel+Webpack+ESLint+Redux
+# 3 React+Babel+Webpack+Server+Redux
 
 ```javascript
   npm install redux react-redux redux-thunk --save
