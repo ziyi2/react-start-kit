@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { add } from './es6';
+import { add } from '../src/es6.js';
 
 describe('add es6 function test',() => {
     it('5+5=10?',() => {

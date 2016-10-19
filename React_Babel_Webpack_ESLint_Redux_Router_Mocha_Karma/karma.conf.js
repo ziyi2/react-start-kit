@@ -27,7 +27,9 @@ module.exports = function(config) {
     //karma提供的预处理可以在这里查看https://npmjs.org/browse/keyword/karma-preprocessor
     //这里当然要加入webpack,在载入浏览器环境之前先进行打包处理
     preprocessors: {
+      //'./src/**/*.js': ['coverage'],
       './test/**/*test.*': ['webpack']
+
     },
 
 
@@ -43,7 +45,7 @@ module.exports = function(config) {
           loader: "babel-loader",
           query: {
             compact: false,
-            presets: ['es2015', 'stage-3', 'react'],
+            presets: ['es2015'],
             plugins: ['istanbul']
           }
         }]
@@ -86,4 +88,4 @@ module.exports = function(config) {
     ]
 
   })
-}
+};

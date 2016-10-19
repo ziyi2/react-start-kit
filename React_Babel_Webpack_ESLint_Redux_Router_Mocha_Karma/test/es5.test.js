@@ -1,4 +1,4 @@
-var add = require('./es5.js');
+var add = require('../src/es5.js');
 var chai = require('chai');
 var expect = chai.expect;
 
