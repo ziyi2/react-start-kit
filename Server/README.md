@@ -150,7 +150,7 @@
 
 如果命令通过
 <p align="center">
- <img src="https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/precommit-2.jpeg" alt="ESLint">
+ <img src="https://github.com/ziyi2/react-start-kit/blob/master/Server/imgs/precommit-2.jpeg" alt="ESLint">
 </p>
 
 当然如果不想在提交之前执行不想要的命令,修改`pre-commit`字段如下
