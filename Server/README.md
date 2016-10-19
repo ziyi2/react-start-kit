@@ -114,7 +114,8 @@
 
 
 <p align="center">
- <img src="https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/eslint.jpeg" alt="ESLint">
+ <img src="https://github.com/ziyi2/react-start-kit/blob/master/Server/imgs/eslint.jpeg" alt="ESLint">
+
 </p>
 
 >注意: 在MAC下有效,但是Windows无效?
@@ -144,7 +145,7 @@
 可以删除`jshintrc`和`jshintignore`文件,因为检测使用的是ESLint,提交代码时如果`npm run lint`不通过
 
 <p align="center">
- <img src="https://github.com/ziyi2/react-start-kit/blob/master/React_Babel_Webpack_ESLint/imgs/precommit.jpeg" alt="ESLint">
+ <img src="https://github.com/ziyi2/react-start-kit/blob/master/Server/imgs/precommit.jpeg" alt="ESLint">
 </p>
 
 如果命令通过
@@ -160,10 +161,13 @@
   ]
 ```
 
+## 2.4 小结
+
+
 这一章节主要是启动一个`express`服务,自动监听并热部署我们的`react`代码,这样的话不能每次重新`webpack`手动打包.
 
 
-## 2.4 参考链接
+## 2.5 参考链接
 
 ### Webpack
 - [Hot Module Replacement](https://github.com/webpack/docs/wiki/hot-module-replacement)

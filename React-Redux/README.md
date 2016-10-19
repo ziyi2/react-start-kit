@@ -1,5 +1,14 @@
 # 3 React+Babel+Webpack+Server+Redux
 
+## 3.1 概述
+
+Redux还是非常难以理解的,相对比较复杂,建议在看Redux之前先查看一下Flux的实现,关于Flux可以查看[Flux架构入门教程](http://www.ruanyifeng.com/blog/2016/01/flux.html).当然我自己也有一些关于Flux的Demo,具体查看[flux](https://github.com/ziyi2/rewatch/tree/master/client/javascript/flux-src/index).
+
+
+
+
+
+
 ```javascript
   npm install redux react-redux redux-thunk --save
 ```
@@ -31,6 +40,7 @@ Redux非常复杂,这里就不细说了,详情可以仔细阅读[Redux中文文�
 ## 参考链接
 
 ### Redux
+- [Flux架构入门教程](http://www.ruanyifeng.com/blog/2016/01/flux.html)
 - [Redux中文文档](http://cn.redux.js.org/index.html)
 - [redux](https://github.com/reactjs/redux)
 - [redux-tutorial](https://github.com/react-guide/redux-tutorial-cn)

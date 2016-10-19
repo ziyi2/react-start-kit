@@ -10,7 +10,7 @@
 
 ## 1.2 Babel 6
 
-安装使用`babel`会用到的模块,需要注意因为在`react`中会使用一些`es7`的特性,所以这里选用`stage-3`
+安装使用`babel`会用到的模块,需要注意因为在`react`中会使用一些`ES7`的特性,所以这里选用`stage-3`
 
 ```javascript
     npm install babel-core babel-preset-es2015 babel-preset-react babel-preset-stage-3 --save-dev
@@ -43,7 +43,7 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 
 ```javascript
    {
-     "presets": ["es2015", "react", "stage-3"],
+     "presets": ["es2015", "react", "stage-3"],     //es2015用于支持ES6,react当然是用于支持JSX语法,stage-3主要用于支持部分ES7语法
      "plugins": ["transform-runtime"]
    }
 ```
@@ -60,47 +60,7 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
     npm install babel-loader css-loader style-loader url-loader --save-dev
 ```
 
-创建`webpack.config.js`文件
-
-
-```javascript
-    var webpack = require('webpack');
-    var path = require('path');
-
-    module.exports = {
-        entry: [
-            'babel-polyfill',
-            path.resolve(__dirname, 'src/App.jsx')
-        ],
-        resolve: {
-            extensions: ["", ".js", ".jsx"]     //require的时候不需要加上文件扩展名
-        },
-        output: {
-            path: __dirname + '/build',
-            publicPath: '/',
-            filename: 'bundle.js'
-        },
-        module: {
-            loaders: [
-                {
-                    test: /\.css$/,
-                    include: path.resolve(__dirname, 'src'),
-                    loader: 'style-loader!css-loader?modules'
-                },
-                {
-                    test: /\.jsx?$/,
-                    include: path.resolve(__dirname, 'src'),
-                    exclude: /node_modules/,
-                    loader: 'babel'
-                },
-                {
-                    test: /\.(png|jpg)$/,
-                    loader: 'url-loader?limit=8192'
-                }
-            ]
-        }
-    };
-```
+创建并配置`webpack.config.js`文件(具体配置查看项目).
 
 
 在`package.json`文件中添加启动命令
@@ -114,7 +74,6 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 ```javascript
      "build": "webpack --progress --colors --watch"
 ```
-
 
 
 ## 1.4 运行
@@ -139,10 +98,12 @@ Babel当然不能支持所有的ES6特性, 当然它需要一些`runtime`支持,
 >注意: 这里的`bundle.js`已经有1.05MB大小,明显需要优化处理.
 
 
-这样,我们的第一章节的工作就做完了,这里主要实现了使用`webpack`来打包使用`es6`语法编写的`react`代码.如果不了解`react`和`es6`,可以查看参考文献.
+## 1.5 小结
+
+这里主要实现了使用`webpack`来打包使用`es6`语法编写的`react`代码.如果不了解`react`和`es6`,可以查看参考链接.
 
 
-## 1.5 参考链接
+## 1.6 参考链接
 
 ### React
 - [react-demo](http://www.ziyi2.cn/2016/07/20/React-OverView/#more)
