@@ -1,5 +1,13 @@
 # react-start-kit
 
+## 起步
+
+- [Webpack](https://github.com/ziyi2/react-start-kit/tree/master/Webpack) 使用`webpack`来打包使用`es6`语法编写的`react`代码
+- [ESLint](https://github.com/ziyi2/react-start-kit/tree/master/ESLint) 添加`webpack-dev-server`,启动一个`express`服务,自动监听并热部署`react`代码
+- [React-Redux](https://github.com/ziyi2/react-start-kit/tree/master/React-Redux) 添加`redux`
+- [React-Router](https://github.com/ziyi2/react-start-kit/tree/master/React-Router) 添加`router`
+- [Mocha](https://github.com/ziyi2/react-start-kit/tree/master/Mocha) 添加服务端测试框架
+- [Karma](https://github.com/ziyi2/react-start-kit/tree/master/Karma) 添加客户端测试环境
 
 
 
